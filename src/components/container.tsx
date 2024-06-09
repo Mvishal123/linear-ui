@@ -1,7 +1,16 @@
+import clsx from "clsx";
 import React from "react";
 
-const Container = ({ children }: { children: React.ReactNode }) => {
-  return <div className="max-w-[120rem] mx-auto">{children}</div>;
+interface ContainerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+const Container = ({ children, className }: ContainerProps) => {
+  return (
+    <div className={clsx("max-w-[102.4rem] mx-auto", className)}>
+      {children}
+    </div>
+  );
 };
 
 export default Container;
