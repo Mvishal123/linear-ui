@@ -24,8 +24,8 @@ const Header = () => {
         >
           <nav
             className={clsx(
-              "fixed inset-x-0 top-nav-height h-[calc(100vh-var(--nav-height))] bg-background px-8 transition-[opacity] duration-500 max-md:pt-8 md:visible md:relative md:inset-0 md:h-auto md:w-full md:px-0 md:opacity-100 md:transition-none",
-              isOpen ? "opacity-100" : "opacity-0",
+              "md:bg-transparent fixed inset-x-0 top-nav-height h-[calc(100vh-var(--nav-height))] bg-background px-8 transition-[opacity] duration-500 max-md:pt-8 md:visible md:relative md:inset-0 md:h-auto md:w-full md:px-0 md:opacity-100 md:transition-none",
+              isOpen ? "opacity-100" : "opacity-0 delay-100",
             )}
           >
             <ul

@@ -11,8 +11,10 @@ const config: Config = {
       sans: '"SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif',
     },
     colors: {
-      transaprent: "transparent",
+      transparent: "transparent",
       white_a08: "hsla(0,0%,100%,.08)",
+      "tertiary-text": "#b4bcd099",
+      "secondary-text": "#b4bcd0",
       white: "#ffffff",
       background: "#000212",
       brand: "#5e6ad2",
