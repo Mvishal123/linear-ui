@@ -37,6 +37,7 @@ const config: Config = {
       10: "4rem",
       11: "4.4rem",
       12: "4.8rem",
+      "nav-height": "var(--nav-height)",
     },
   },
   plugins: [],
