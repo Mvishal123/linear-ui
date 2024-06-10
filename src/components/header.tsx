@@ -18,21 +18,21 @@ const Header = () => {
         </Link>
         <div
           className={clsx(
-            "fixed inset-x-0 top-nav-height h-[calc(100vh-var(--nav-height))] px-8 transition-[visibility] max-md:w-full max-md:bg-background max-md:pt-8 md:visible md:relative md:inset-0 md:block md:h-auto",
-            isOpen ? "visible" : "invisible delay-200",
+            "transition-[visibility]",
+            isOpen ? "visible" : "invisible delay-500",
           )}
         >
           <nav
             className={clsx(
-              "transition-[opacity] duration-500 md:opacity-100",
+              "fixed inset-x-0 top-nav-height h-[calc(100vh-var(--nav-height))] bg-background px-8 transition-[opacity] duration-500 max-md:pt-8 md:visible md:relative md:inset-0 md:h-auto md:w-full md:px-0 md:opacity-100 md:transition-none",
               isOpen ? "opacity-100" : "opacity-0",
             )}
           >
             <ul
               className={clsx(
                 "flex h-full flex-col gap-6 md:flex-row md:items-center",
-                "[&_a]:block [&_a]:h-nav-height [&_a]:translate-y-8 [&_a]:border-b [&_a]:border-white_a08 [&_a]:text-lg [&_a]:font-semibold [&_a]:transition-transform [&_a]:duration-1000 md:[&_a]:inline md:[&_a]:translate-y-0 md:[&_a]:border-none md:[&_a]:text-sm",
-                isOpen && "[&_a]:translate-y-0",
+                "[&_a]:block [&_a]:h-nav-height [&_a]:border-b [&_a]:border-white_a08 [&_a]:text-lg [&_a]:font-semibold [&_a]:transition-transform [&_a]:duration-500 md:[&_a]:inline md:[&_a]:translate-y-0 md:[&_a]:border-none md:[&_a]:text-sm",
+                isOpen ? "[&_a]:translate-y-0" : "[&_a]:translate-y-10",
               )}
             >
               <li>

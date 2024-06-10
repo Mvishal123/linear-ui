@@ -11,6 +11,7 @@ const config: Config = {
       sans: '"SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif',
     },
     colors: {
+      transaprent: "transparent",
       white_a08: "hsla(0,0%,100%,.08)",
       white: "#ffffff",
       background: "#000212",
@@ -18,6 +19,7 @@ const config: Config = {
     },
     fontSize: {
       "5xl": ["8rem", "1"],
+      "4xl": ["4.4rem", "1"],
       md: "1.6rem",
       lg: ["2.2rem", "1.3"],
       sm: "1.4rem",
