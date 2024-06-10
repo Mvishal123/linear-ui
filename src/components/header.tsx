@@ -11,50 +11,55 @@ import clsx from "clsx";
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   return (
-    <header className="h-nav-height fixed top-0 inset-x-0 border-b border-white_a08 backdrop-blur-[14px]">
-      <Container className="flex items-center h-full">
+    <header className="fixed inset-x-0 top-0 h-nav-height border-b border-white_a08 backdrop-blur-[14px]">
+      <Container className="flex h-full items-center">
         <Link href="/" className="mr-6">
           <Logo className="h-[1.8rem] w-[1.8rem]" />
         </Link>
-        <nav
+        <div
           className={clsx(
-            "md:block",
-            isOpen
-              ? "fixed md:relative top-nav-height md:inset-0 max-md:pt-8 px-8 h-[calc(100vh-var(--nav-height))] md:h-auto max-md:bg-background max-md:w-full"
-              : "hidden"
+            "fixed inset-x-0 top-nav-height h-[calc(100vh-var(--nav-height))] px-8 transition-[visibility] max-md:w-full max-md:bg-background max-md:pt-8 md:visible md:relative md:inset-0 md:block md:h-auto",
+            isOpen ? "visible" : "invisible delay-200",
           )}
         >
-          <ul
+          <nav
             className={clsx(
-              "flex flex-col md:flex-row md:items-center h-full gap-6",
-              "[&_a]:text-lg md:[&_a]:text-sm [&_a]:font-semibold [&_a]:h-nav-height [&_a]:border-b [&_a]:block md:[&_a]:inline [&_a]:border-white_a08 md:[&_a]:border-none",
-              isOpen && "overflow-auto"
+              "transition-[opacity] duration-500 md:opacity-100",
+              isOpen ? "opacity-100" : "opacity-0",
             )}
           >
-            <li>
-              <Link href="#">Features</Link>
-            </li>
-            <li>
-              <Link href="#">Method</Link>
-            </li>
-            <li className={clsx("block md:hidden lg:block")}>
-              <Link href="#">Customers</Link>
-            </li>
-            <li className={clsx("block md:hidden lg:block")}>
-              <Link href="#">Changelog</Link>
-            </li>
-            <li className={clsx("block md:hidden lg:block")}>
-              <Link href="#">Pricing</Link>
-            </li>
-            <li>
-              <Link href="#">Company</Link>
-            </li>
-            <li>
-              <Link href="#">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="ml-auto h-full flex gap-6 items-center">
+            <ul
+              className={clsx(
+                "flex h-full flex-col gap-6 md:flex-row md:items-center",
+                "[&_a]:block [&_a]:h-nav-height [&_a]:translate-y-8 [&_a]:border-b [&_a]:border-white_a08 [&_a]:text-lg [&_a]:font-semibold [&_a]:transition-transform [&_a]:duration-1000 md:[&_a]:inline md:[&_a]:translate-y-0 md:[&_a]:border-none md:[&_a]:text-sm",
+                isOpen && "[&_a]:translate-y-0",
+              )}
+            >
+              <li>
+                <Link href="#">Features</Link>
+              </li>
+              <li>
+                <Link href="#">Method</Link>
+              </li>
+              <li className={clsx("block md:hidden lg:block")}>
+                <Link href="#">Customers</Link>
+              </li>
+              <li className={clsx("block md:hidden lg:block")}>
+                <Link href="#">Changelog</Link>
+              </li>
+              <li className={clsx("block md:hidden lg:block")}>
+                <Link href="#">Pricing</Link>
+              </li>
+              <li>
+                <Link href="#">Company</Link>
+              </li>
+              <li>
+                <Link href="#">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="ml-auto flex h-full items-center gap-6">
           <Link href="#" className="text-sm">
             Login
           </Link>
@@ -66,7 +71,7 @@ const Header = () => {
             onClick={() => setIsOpen((prev) => !prev)}
           >
             <span className="sr-only">menu icon</span>
-            <HamburgerIcon />
+            <HamburgerIcon isOpen={isOpen} />
           </button>
         </div>
       </Container>

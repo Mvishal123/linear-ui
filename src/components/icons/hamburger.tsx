@@ -1,6 +1,10 @@
+import clsx from "clsx";
 import React from "react";
 
-const HamburgerIcon = () => {
+interface HamburgerIconProps {
+  isOpen: boolean;
+}
+const HamburgerIcon = ({ isOpen }: HamburgerIconProps) => {
   return (
     <svg
       width="16"
@@ -17,8 +21,9 @@ const HamburgerIcon = () => {
         rx="0.5"
         style={{
           transformOrigin: "center",
-          transition: "160ms var(--ease-out-quad)",
-          transform: "translateY(-3.5px)",
+          transition: "160ms",
+          transform: isOpen ? "translateY(0)" : "translateY(-3.5px)",
+          rotate: isOpen ? "45deg" : "0deg",
         }}
       ></rect>
       <rect
@@ -29,8 +34,9 @@ const HamburgerIcon = () => {
         rx="0.5"
         style={{
           transformOrigin: "center",
-          transition: "160ms var(--ease-out-quad)",
-          transform: "translateY(3.5px)",
+          transition: "160ms",
+          transform: isOpen ? "translateY(0)" : "translateY(3.5px)",
+          rotate: isOpen ? "-45deg" : "0deg",
         }}
       ></rect>
     </svg>
