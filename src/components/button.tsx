@@ -1,6 +1,5 @@
-import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
-import clsx from "clsx";
+import React from "react";
 
 interface ButtonProps extends VariantProps<typeof buttonClasses> {
   children: React.ReactNode;

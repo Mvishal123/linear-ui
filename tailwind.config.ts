@@ -12,6 +12,7 @@ const config: Config = {
     },
     colors: {
       transparent: "transparent",
+      offWhite: "#f7f8f8",
       white_a08: "hsla(0,0%,100%,.08)",
       "tertiary-text": "#b4bcd099",
       "secondary-text": "#b4bcd0",
@@ -20,12 +21,18 @@ const config: Config = {
       brand: "#5e6ad2",
     },
     fontSize: {
-      "5xl": ["8rem", "1"],
-      "4xl": ["4.4rem", "1"],
-      md: "1.6rem",
-      lg: ["2.2rem", "1.3"],
-      sm: "1.4rem",
       xs: "1.3rem",
+      sm: "1.4rem",
+      md: "1.6rem",
+      lg: "1.8rem",
+      xl: ["2.2rem", "1.3"],
+      "2xl": "2.4rem",
+      "3xl": "2.6rem",
+      "4xl": "3.2rem",
+      "5xl": "4rem",
+      "6xl": ["4.4rem", "1.1"],
+      "7xl": ["4.8rem", "1.1"],
+      "8xl": ["8rem", "1.1"],
     },
     spacing: {
       0: "0",
@@ -42,6 +49,10 @@ const config: Config = {
       11: "4.4rem",
       12: "4.8rem",
       "nav-height": "var(--nav-height)",
+    },
+    backgroundImage: {
+      "page-gradient":
+        "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, .3), transparent)",
     },
   },
   plugins: [],

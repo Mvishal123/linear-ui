@@ -12,3 +12,10 @@
     font-size: 62.5%;
   }
 }
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to right bottom, #fff 30%, hsla(0, 0%, 100%, .38));
+    background-clip: text;
+  }
+}

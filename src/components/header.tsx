@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "./icons/logo";
 import Link from "next/link";
 import Container from "./container";
@@ -10,6 +10,28 @@ import clsx from "clsx";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) {
+      html.classList.toggle("overflow-hidden", isOpen);
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleOrientationChange = () => {
+      setIsOpen(false);
+    };
+
+    window.addEventListener("orientationchange", handleOrientationChange);
+    window.addEventListener("resize", handleOrientationChange);
+
+    return () => {
+      window.removeEventListener("orientationchange", handleOrientationChange);
+      window.removeEventListener("resize", handleOrientationChange);
+    }
+  }, []);
+
   return (
     <header className="fixed inset-x-0 top-0 h-nav-height border-b border-white_a08 backdrop-blur-[14px]">
       <Container className="flex h-full items-center">
@@ -24,7 +46,7 @@ const Header = () => {
         >
           <nav
             className={clsx(
-              "md:bg-transparent fixed inset-x-0 top-nav-height h-[calc(100vh-var(--nav-height))] bg-background px-8 transition-[opacity] duration-500 max-md:pt-8 md:visible md:relative md:inset-0 md:h-auto md:w-full md:px-0 md:opacity-100 md:transition-none",
+              "fixed inset-x-0 top-nav-height h-[calc(100vh-var(--nav-height))] bg-background px-8 transition-[opacity] duration-500 max-md:pt-8 md:visible md:relative md:inset-0 md:h-auto md:w-full md:bg-transparent md:px-0 md:opacity-100 md:transition-none",
               isOpen ? "opacity-100" : "opacity-0 delay-100",
             )}
           >
