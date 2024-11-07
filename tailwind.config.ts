@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -12,13 +13,14 @@ const config: Config = {
     },
     colors: {
       transparent: "transparent",
-      offWhite: "#f7f8f8",
-      white_a08: "hsla(0,0%,100%,.08)",
-      "tertiary-text": "#b4bcd099",
-      "secondary-text": "#b4bcd0",
+      grey: "#858699",
       white: "#ffffff",
       background: "#000212",
       brand: "#5e6ad2",
+      "off-white": "#f7f8f8",
+      "transparent-white": "hsla(0,0%,100%,.08)",
+      "tertiary-text": "#b4bcd099",
+      "secondary-text": "#b4bcd0",
     },
     fontSize: {
       xs: "1.3rem",
@@ -51,8 +53,20 @@ const config: Config = {
       "nav-height": "var(--nav-height)",
     },
     backgroundImage: {
+      "radial-gradient":
+        "linear-gradient(92.88deg, #455eb5 9.16%, #5643cc 43.89%, #673fd7 64.72%)",
       "page-gradient":
         "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, .3), transparent)",
+    },
+    keyframes: {
+      "fade-in": {
+        from: { opacity: "0", transform: "translateY(-10px)" },
+        to: { opacity: "1", transform: "none" },
+      },
+    },
+
+    animation: {
+      "fade-in": "fade-in 1s var(--animation-delay) ease forwards",
     },
   },
   plugins: [],

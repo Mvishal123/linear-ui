@@ -1,19 +1,28 @@
+import clsx from "clsx";
 import React from "react";
 
 interface HeroProps {
   children: React.ReactNode;
+  className?: string;
 }
 
 interface HeroHeadingProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export const HeroTitle = ({ children }: HeroHeadingProps) => (
-  <h1 className="text-gradient text-6xl md:text-8xl my-6">{children}</h1>
+export const HeroTitle = ({ children, className }: HeroHeadingProps) => (
+  <h1 className={clsx("text-gradient my-6 text-6xl md:text-8xl", className)}>
+    {children}
+  </h1>
 );
 
-export const HeroSubtitle = ({ children }: HeroHeadingProps) => (
-  <p className="md:text-xl mb-12 text-lg text-secondary-text">{children}</p>
+export const HeroSubtitle = ({ children, className }: HeroHeadingProps) => (
+  <p
+    className={clsx("mb-12 text-lg text-secondary-text md:text-xl", className)}
+  >
+    {children}
+  </p>
 );
 
 export const Hero = ({ children }: HeroProps) => {

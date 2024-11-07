@@ -29,14 +29,14 @@ const Header = () => {
     return () => {
       window.removeEventListener("orientationchange", handleOrientationChange);
       window.removeEventListener("resize", handleOrientationChange);
-    }
+    };
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 h-nav-height border-b border-white_a08 backdrop-blur-[14px]">
+    <header className="border-transparent-white fixed inset-x-0 top-0 h-nav-height border-b backdrop-blur-[14px]">
       <Container className="flex h-full items-center">
         <Link href="/" className="mr-6">
-          <Logo className="h-[1.8rem] w-[1.8rem]" />
+          <Logo className="size-[1.8rem]" />
         </Link>
         <div
           className={clsx(
@@ -53,7 +53,7 @@ const Header = () => {
             <ul
               className={clsx(
                 "flex h-full flex-col gap-6 md:flex-row md:items-center",
-                "[&_a]:block [&_a]:h-nav-height [&_a]:border-b [&_a]:border-white_a08 [&_a]:text-lg [&_a]:font-semibold [&_a]:transition-transform [&_a]:duration-500 md:[&_a]:inline md:[&_a]:translate-y-0 md:[&_a]:border-none md:[&_a]:text-sm",
+                "[&_a:hover]:text-grey [&_a]:border-transparent-white [&_a]:block [&_a]:h-nav-height [&_a]:border-b [&_a]:text-lg [&_a]:font-semibold [&_a]:transition-transform [&_a]:duration-500 md:[&_a]:inline md:[&_a]:translate-y-0 md:[&_a]:border-none md:[&_a]:text-sm [&_li]:transition-colors",
                 isOpen ? "[&_a]:translate-y-0" : "[&_a]:translate-y-10",
               )}
             >
@@ -85,9 +85,11 @@ const Header = () => {
           <Link href="#" className="text-sm">
             Login
           </Link>
-          <Link href="#" className="text-sm">
-            <Button href="#">Sign up</Button>
-          </Link>
+
+          <Button href="#" variant="primary" size="medium">
+            Sign up
+          </Button>
+
           <button
             className="md:hidden"
             onClick={() => setIsOpen((prev) => !prev)}

@@ -15,7 +15,19 @@
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(to right bottom, #fff 30%, hsla(0, 0%, 100%, .38));
+    background: linear-gradient(
+      to right bottom,
+      #fff 50%,
+      hsla(0, 0%, 100%, 0.5)
+    );
     background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-shadow {
+    box-shadow: rgba(80, 63, 205, 0.5) 0px 1px 40px;
+  }
+  .text-shadow {
+    text-shadow: rgba(0, 0, 0, 0.56) 0 3px 12px;
   }
 }

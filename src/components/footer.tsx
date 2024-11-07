@@ -48,11 +48,11 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="mt-12 border-t border-white_a08">
+    <footer className="border-transparent-white mt-12 border-t">
       <Container>
         <div className="flex flex-col justify-between py-[5.6rem] text-sm lg:flex-row">
           <div className="flex w-full flex-row justify-between lg:mr-auto lg:w-auto lg:flex-col">
-            <div className="text-tertiary-text flex items-center gap-1">
+            <div className="flex items-center gap-1 text-tertiary-text">
               <Logo /> <span>- Designed Wordwide</span>
             </div>
             <div className="flex items-center gap-6">
@@ -68,7 +68,7 @@ const Footer = () => {
                 className="mt-10 flex min-w-[50%] flex-col md:min-w-[18rem] lg:mt-0"
                 key={i}
               >
-                <h3 className="text-secondary-text mb-3 font-medium">
+                <h3 className="mb-3 font-medium text-secondary-text">
                   {section.title}
                 </h3>
                 <ul className="">
@@ -79,7 +79,7 @@ const Footer = () => {
                     >
                       <Link
                         href={link.href}
-                        className="text-tertiary-text mb-3 block"
+                        className="mb-3 block text-tertiary-text"
                       >
                         {link.title}
                       </Link>
