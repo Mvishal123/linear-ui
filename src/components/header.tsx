@@ -33,8 +33,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="border-transparent-white fixed inset-x-0 top-0 h-nav-height border-b backdrop-blur-[14px]">
-      <Container className="flex h-full items-center">
+    <header className="border-transparent-white fixed left-0 top-0 z-10 w-full border-b backdrop-blur-[12px]">
+      <Container className="flex items-center h-nav-height">
         <Link href="/" className="mr-6">
           <Logo className="size-[1.8rem]" />
         </Link>

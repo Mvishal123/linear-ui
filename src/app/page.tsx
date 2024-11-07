@@ -1,6 +1,7 @@
 import Button, { IconWrapper } from "@/components/button";
 import Container from "@/components/container";
 import { HeroTitle, Hero, HeroSubtitle } from "@/components/hero";
+import HeroImage from "@/components/hero-image";
 import ChevronRight from "@/components/icons/chevon-right";
 import React from "react";
 
@@ -12,25 +13,25 @@ const page = () => {
           href="/"
           size="small"
           variant="secondary"
-          className="animate-fade-in [--animation-delay:0ms] opacity-0 translate-y-[10px]"
+          className="animate-fade-in translate-y-[10px] opacity-0 [--animation-delay:0ms]"
         >
           Linear 2022 Release – Built for scale
           <IconWrapper>→</IconWrapper>
         </Button>
         <Hero>
-          <HeroTitle className="animate-fade-in [--animation-delay:200ms] opacity-0 translate-y-[10px]">
+          <HeroTitle className="animate-fade-in translate-y-[10px] opacity-0 [--animation-delay:200ms]">
             Linear is a better way <br className="hidden md:block" /> to build
             products
           </HeroTitle>
-          <HeroSubtitle className="animate-fade-in [--animation-delay:400ms] opacity-0 translate-y-[10px]">
+          <HeroSubtitle className="animate-fade-in translate-y-[10px] opacity-0 [--animation-delay:400ms]">
             Meet the new standard for modern software development.
             <br className="hidden md:block" />
             Streamline issues, sprints, and product roadmaps.
           </HeroSubtitle>
           <Button
             href="/"
-            size="medium"
-            className="animate-fade-in [--animation-delay:600ms] opacity-0 translate-y-[10px]"
+            size="large"
+            className="animate-fade-in translate-y-[10px] opacity-0 [--animation-delay:600ms]"
           >
             Get Started
             <IconWrapper>
@@ -38,7 +39,7 @@ const page = () => {
             </IconWrapper>
           </Button>
         </Hero>
-        <img src="/linear_hero.webp" alt="" className="mt-[10.8rem]" />
+        <HeroImage />
       </Container>
     </main>
   );

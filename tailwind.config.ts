@@ -54,19 +54,64 @@ const config: Config = {
     },
     backgroundImage: {
       "radial-gradient":
-        "linear-gradient(92.88deg, #455eb5 9.16%, #5643cc 43.89%, #673fd7 64.72%)",
+        "linear-gradient(92.88deg, #455eb5 20%, #5643cc 50%, #673fd7 70%)",
       "page-gradient":
         "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, .3), transparent)",
+      "hero-gradient":
+        "radial-gradient(ellipse 50% 80% at 20% 40%, rgba(93, 52, 221, .1), transparent), radial-gradient(ellipse 50% 80% at 80% 50%, rgba(120, 119, 198, .15), transparent)",
+      "hero-glow":
+        "conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg)",
     },
     keyframes: {
       "fade-in": {
         from: { opacity: "0", transform: "translateY(-10px)" },
         to: { opacity: "1", transform: "none" },
       },
+      "hero-rotate": {
+        "0%": {
+          scale: "1",
+          transform: "rotateX(25deg)",
+        },
+        "50%": {
+          scale: "0.8",
+          transform: "rotateX(25deg)",
+        },
+        "60%": {
+          transform: "rotateX(25deg)",
+          scale: "0.8",
+        },
+        "100%": {
+          transform: "rotateX(0deg)",
+          scale: "1",
+        },
+      },
+      "hero-image": {
+        "0%,60%": {
+          opacity: "0",
+        },
+        "100%": {
+          opacity: "1",
+        },
+      },
+      "hero-glow": {
+        "0%": {
+          opacity: "0",
+        },
+        "25%": {
+          opacity: "1",
+          inset: "-10px"
+        },
+        "100%": {
+          opacity: "1",
+          inset: "60px",
+        },
+      },
     },
-
     animation: {
       "fade-in": "fade-in 1s var(--animation-delay) ease forwards",
+      "hero-rotate": "hero-rotate  800ms ease forwards",
+      "hero-image": "hero-image 800ms ease forwards",
+      "hero-glow": "hero-glow 3s 500ms ease forwards",
     },
   },
   plugins: [],
