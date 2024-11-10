@@ -39,4 +39,12 @@
   .stars-mask {
     mask-image: radial-gradient(circle at center center, #000, transparent 80%);
   }
+
+  .linear-faded-mask {
+    mask-image: linear-gradient(#000, transparent 70%);
+  }
+
+  .no-mask {
+    mask-image: none;
+  }
 }

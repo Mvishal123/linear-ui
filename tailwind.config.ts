@@ -50,6 +50,8 @@ const config: Config = {
       10: "4rem",
       11: "4.4rem",
       12: "4.8rem",
+      13: "5.2rem",
+      14: "5.6rem",
       "nav-height": "var(--nav-height)",
     },
     backgroundImage: {
@@ -65,6 +67,8 @@ const config: Config = {
         "linear-gradient(var(--direction),#9d9bf2 .43%,#7877c6 14.11%,rgba(120,119,198,0) 62.95%)",
       "radial-faded":
         "radial-gradient(circle at center bottom,var(--color),transparent 70%)",
+      "glass-gradient":
+        "linear-gradient(hsla(0,0%,100%,0),hsla(0,0%,100%,.05))",
     },
     keyframes: {
       "fade-in": {
@@ -152,6 +156,14 @@ const config: Config = {
           opacity: "0",
         },
       },
+      zap: {
+        "0%, 11%, 9%, 100%": {
+          fill: "transparent",
+        },
+        "10%": {
+          fill: "#fff",
+        },
+      },
     },
     animation: {
       "fade-in": "fade-in 1s var(--animation-delay) ease forwards",
@@ -161,6 +173,7 @@ const config: Config = {
       "hero-sketch": "hero-sketch 800ms ease-out forwards",
       "glow-lines-horizontal": "glow-lines-horizontal var(--duration) ease-in",
       "glow-lines-vertical": "glow-lines-vertical var(--duration) ease-in",
+      "zap": "zap 2.5s calc((var(--index) - 1) * 20ms) linear infinite",
     },
   },
   plugins: [],
