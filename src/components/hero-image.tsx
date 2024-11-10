@@ -58,9 +58,9 @@ const HeroImage = () => {
       <div
         ref={ref}
         className={clsx(
-          "bg-hero-gradient border-transparent-white mt-[10.8rem] w-full rounded border",
+          "mt-[10.8rem] w-full rounded border border-transparent-white bg-hero-gradient",
           inView ? "animate-hero-rotate" : "",
-          "before:bg-hero-glow before:absolute before:inset-0 before:-z-10 before:opacity-0 before:blur-[120px]",
+          "before:absolute before:inset-0 before:-z-10 before:bg-hero-glow before:opacity-0 before:blur-[120px]",
           inView ? "before:animate-hero-glow" : "before:opacity-0",
         )}
         style={{
@@ -73,7 +73,7 @@ const HeroImage = () => {
               <span
                 key={line.id}
                 className={clsx(
-                  "bg-glow-line absolute left-0 top-0 inline-block h-[1px] opacity-0",
+                  "absolute left-0 top-0 inline-block h-[1px] bg-glow-line opacity-0",
                   inView ? `animate-glow-lines-horizontal` : "",
                 )}
                 style={
@@ -89,7 +89,7 @@ const HeroImage = () => {
               <span
                 key={line.id}
                 className={clsx(
-                  "bg-glow-line absolute right-0 top-0 block w-[1px] opacity-0",
+                  "absolute right-0 top-0 block w-[1px] bg-glow-line opacity-0",
                   inView ? "animate-glow-lines-vertical" : "",
                 )}
                 style={

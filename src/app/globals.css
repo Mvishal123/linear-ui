@@ -31,4 +31,12 @@
   .text-shadow {
     text-shadow: rgba(0, 0, 0, 0.56) 0 3px 12px;
   }
+
+  .radial-gradient {
+    mask-image: radial-gradient(circle at center center, #000, transparent 80%);
+  }
+
+  .stars-mask {
+    mask-image: radial-gradient(circle at center center, #000, transparent 80%);
+  }
 }

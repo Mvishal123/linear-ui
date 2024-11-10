@@ -63,6 +63,8 @@ const config: Config = {
         "conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg)",
       "glow-line":
         "linear-gradient(var(--direction),#9d9bf2 .43%,#7877c6 14.11%,rgba(120,119,198,0) 62.95%)",
+      "radial-faded":
+        "radial-gradient(circle at center bottom,var(--color),transparent 70%)",
     },
     keyframes: {
       "fade-in": {
@@ -157,10 +159,8 @@ const config: Config = {
       "hero-image": "hero-image 600ms 400ms ease forwards",
       "hero-glow": "hero-glow 4s 800ms ease-out forwards",
       "hero-sketch": "hero-sketch 800ms ease-out forwards",
-      "glow-lines-horizontal":
-        "glow-lines-horizontal var(--duration) ease-in",
-      "glow-lines-vertical":
-        "glow-lines-vertical var(--duration) ease-in",
+      "glow-lines-horizontal": "glow-lines-horizontal var(--duration) ease-in",
+      "glow-lines-vertical": "glow-lines-vertical var(--duration) ease-in",
     },
   },
   plugins: [],
