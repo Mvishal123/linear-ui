@@ -415,7 +415,7 @@ const Keyboard = () => {
           rx="2.75"
         ></rect>
       </g>
-      <g data-key="c" className="active">
+      <g data-key="c">
         <rect
           width="38.756"
           height="38.756"
