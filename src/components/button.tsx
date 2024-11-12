@@ -1,13 +1,21 @@
 import { cva, VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 import Link from "next/link";
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 
-interface ButtonProps extends VariantProps<typeof buttonClasses> {
-  children: React.ReactNode;
-  className?: string;
+interface ButtonBaseProps extends VariantProps<typeof buttonClasses> {
+  children?: React.ReactNode;
+}
+
+interface ButtonAsButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  href?: never;
+}
+
+interface ButtonAsLinkProps extends ButtonHTMLAttributes<HTMLAnchorElement> {
   href: string;
 }
+
+type ButtonProps = ButtonBaseProps & (ButtonAsButtonProps | ButtonAsLinkProps);
 
 const buttonClasses = cva("rounded-full inline-flex items-center", {
   variants: {
@@ -17,6 +25,7 @@ const buttonClasses = cva("rounded-full inline-flex items-center", {
       secondary: [
         "text-off-white bg-white/10 hover:bg-white/20 transition-colors border border-transparent-white ease-in ",
         "[&_.icon-wrapper]:bg-transparent-white [&_.icon-wrapper]:rounded-full [&_.icon-wrapper]:px-2 [&_.icon-wrapper]:ml-2 [&_.icon-wrapper]:-mr-2 fade-in duration-150",
+        "[&_.highlight]:bg-transparent-white [&_.highlight]:mr-2 [&_.highlight]:px-2 py-1 [&_.highlight]:rounded-full",
       ],
     },
     size: {
@@ -36,15 +45,33 @@ export const IconWrapper = ({ children }: { children: React.ReactNode }) => (
   <span className="icon-wrapper">{children}</span>
 );
 
-const Button = ({ children, variant, size, href, className }: ButtonProps) => {
+export const Hightlight = ({children}: {children: React.ReactNode}) => (
+  <span className="highlight">{children}</span>
+)
+
+const Button = ({
+  children,
+  variant,
+  size,
+  className,
+  ...props
+}: ButtonProps) => {
+  const classes = buttonClasses({ variant, size, className });
+  if ("href" in props && props.href !== undefined) {
+    return (
+      <Link {...props} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      className={clsx(buttonClasses({ variant, size }), className)}
-    >
+    <button {...props} className={classes}>
       {children}
-    </Link>
+    </button>
   );
 };
 
 export default Button;
+
+

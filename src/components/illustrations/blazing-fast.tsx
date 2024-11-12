@@ -8,7 +8,7 @@ const BlazingFast = () => {
       width="425"
       height="518"
       fill="none"
-      className="h-full w-full"
+      className="max-h-full max-w-full"
     >
       <g stroke-width="18" filter="url(#filter0_f_1706_102550)" opacity="0.4">
         <path

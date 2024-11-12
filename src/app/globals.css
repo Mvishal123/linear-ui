@@ -11,6 +11,11 @@
     @apply bg-background font-sans text-white;
     font-size: 62.5%;
   }
+
+  /* for debugging purpose */
+  /* * {
+    border: 2px solid red
+  } */
 }
 
 @layer utilities {
@@ -46,5 +51,9 @@
 
   .no-mask {
     mask-image: none;
+  }
+
+  .keyboard-mask {
+    mask-image: linear-gradient(transparent, rgba(0, 0, 0, 0.57) 33.98%, #000);
   }
 }

@@ -129,32 +129,16 @@ const config: Config = {
         },
       },
       "glow-lines-horizontal": {
-        "0%": {
-          transform: "translateX(0)",
-          opacity: "1",
-        },
-        "98%": {
-          transform: "translateX(55rem)",
-          opacity: "1",
-        },
-        "100%": {
-          transform: "translateX(55rem)",
-          opacity: "0",
-        },
+        "0%": { opacity: "0", transform: "translateX(0)" },
+        "5%": { opacity: "1", transform: "translateX(0)" },
+        "90%": { opacity: "1" },
+        "100%": { opacity: "0", transform: "translateX(min(60vw, 45rem))" },
       },
       "glow-lines-vertical": {
-        "0%": {
-          transform: "translateY(0)",
-          opacity: "1",
-        },
-        "90%": {
-          transform: "translateY(30rem)",
-          opacity: "1",
-        },
-        "100%": {
-          transform: "translateY(30rem)",
-          opacity: "0",
-        },
+        "0%": { opacity: "0", transform: "translateY(0)" },
+        "5%": { opacity: "1", transform: "translateY(0)" },
+        "90%": { opacity: "1" },
+        "100%": { opacity: "0", transform: "translateY(min(20vw, 30rem))" },
       },
       zap: {
         "0%, 11%, 9%, 100%": {
@@ -173,7 +157,7 @@ const config: Config = {
       "hero-sketch": "hero-sketch 800ms ease-out forwards",
       "glow-lines-horizontal": "glow-lines-horizontal var(--duration) ease-in",
       "glow-lines-vertical": "glow-lines-vertical var(--duration) ease-in",
-      "zap": "zap 2.5s calc((var(--index) - 1) * 20ms) linear infinite",
+      zap: "zap 2.5s calc((var(--index) - 1) * 20ms) linear infinite",
     },
   },
   plugins: [],
