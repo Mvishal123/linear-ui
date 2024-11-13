@@ -87,7 +87,7 @@ const KeyboardShortcuts = () => {
   return (
     <div className="relative">
       <div
-        className="keyboard-mask absolute w-[200%] md:relative md:top-auto md:flex md:w-full md:justify-center"
+        className="keyboard-mask absolute max-h-[30rem] w-[200%] md:relative md:top-auto md:flex md:w-full md:justify-center"
         ref={keyboardWrapperRef}
       >
         <Keyboard />

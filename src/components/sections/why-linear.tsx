@@ -3,6 +3,7 @@ import BlazingFast from "../illustrations/blazing-fast";
 import LinearLogo from "../illustrations/linear-logo";
 import Keyboard from "../illustrations/keyboard";
 import KeyboardShortcuts from "../keyboard-shortcuts";
+import CommandMenu from "../command-menu";
 
 const WhyLinear = () => {
   return (
@@ -50,8 +51,9 @@ const WhyLinear = () => {
               </p>
             </div>
           </div>
-          <div className="col-span-4 flex min-h-[48rem] max-w-full shrink-0 snap-center justify-center rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)] md:p-14">
-            <div className="">
+          <div className="relative flex min-h-[48rem] max-w-full shrink-0 snap-center flex-col overflow-hidden rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-8 md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)] md:p-14">
+            <CommandMenu />
+            <div className="transition-opacity md:[.opened+&]:opacity-0">
               <h3 className="mb-4 text-3xl">Meet your command line</h3>
               <p className="text-md text-secondary-text">
                 Complete any action in seconds with the global command menu.
