@@ -22,7 +22,7 @@ import clsx from "clsx";
 
 const commandOptions = [
   {
-    label: "Assign to..",
+    label: "Assign to...",
     icon: AssignToIcon,
     subOptions: [
       { label: "Jori", icon: PersonIcon },
@@ -65,13 +65,13 @@ const commandOptions = [
 const CommandMenu = () => {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [opened, setOpened] = useState<boolean>(false);
+  const [searchValue, setSearchValue] = useState<string>("");
 
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const clickHandler = (e: MouseEvent) => {
       if (!containerRef.current) return;
-      console.log(e.target);
       const isMenuButton =
         e.target instanceof HTMLButtonElement &&
         e.target.classList.contains("command-button");
@@ -88,9 +88,17 @@ const CommandMenu = () => {
   }, []);
 
   const currentOptions = useMemo(() => {
-    if (selectedOption == null) return commandOptions;
-    return commandOptions[selectedOption].subOptions;
-  }, [selectedOption]);
+    if (selectedOption == null) {
+      return commandOptions.filter((options) => {
+        return options.label
+          .toLowerCase()
+          .startsWith(searchValue.toLowerCase());
+      });
+    }
+    return commandOptions[selectedOption].subOptions.filter((option) => {
+      return option.label.toLowerCase().startsWith(searchValue.toLowerCase());
+    });
+  }, [selectedOption, searchValue]);
 
   return (
     <div className={clsx(opened && "opened")} ref={containerRef}>
@@ -109,6 +117,8 @@ const CommandMenu = () => {
           type="text"
           className="w-full bg-transparent p-5 text-lg outline-none"
           placeholder="Type a command to search"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
         />
 
         <div className="flex w-full flex-col">
@@ -116,6 +126,7 @@ const CommandMenu = () => {
             return (
               <button
                 onClick={(e) => {
+                  setSearchValue("");
                   const isRootItem = "subOptions" in items;
                   isRootItem
                     ? setSelectedOption(index)

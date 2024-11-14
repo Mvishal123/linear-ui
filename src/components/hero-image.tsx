@@ -41,7 +41,6 @@ const HeroImage = () => {
                 availableLenghts[getRandomNumber(0, availableLenghts.length)],
             },
           ]);
-          console.log({ interval });
         }, interval);
       };
 
