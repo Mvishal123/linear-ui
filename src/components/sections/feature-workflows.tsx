@@ -1,19 +1,19 @@
 "use client";
 
 import clsx from "clsx";
+import Button, { IconWrapper } from "../button";
 import { Features } from "../features";
-import { useInView } from "react-intersection-observer";
+import FLogo from "../icons/features/f-logo";
 import FigmaLogo from "../icons/features/figma-logo";
+import GithubLogo from "../icons/features/github-logo";
 import GitlabLogo from "../icons/features/gitlab-logo";
+import RadioLogo from "../icons/features/radio-logo";
 import ZLogo from "../icons/features/z-logo";
 import WorkflowMainIcon from "../logos/workflow-main";
-import { WorkflowsIcon } from "../icons/features";
-import FLogo from "../icons/features/f-logo";
-import GithubLogo from "../icons/features/github-logo";
-import RadioLogo from "../icons/features/radio-logo";
-import Button, { IconWrapper } from "../button";
+import { useInView } from "react-intersection-observer";
 
 const FeatureWorkflows = () => {
+  const { inView, ref } = useInView({ threshold: 0.4 });
   return (
     <Features featureColor="62, 36, 118" featureColorDark="62, 36, 118">
       <div
@@ -31,10 +31,26 @@ const FeatureWorkflows = () => {
           Linear workflows. <br /> Exponential results.
         </h2>
 
-        <div className="flex items-center justify-center gap-4 [&_svg]:h-full [&_svg]:w-full [&_svg]:rounded-full [&_svg]:fill-white/80">
-          <WorkflowIcon icon={FigmaLogo} className="p-2 [--size:4rem]" />
-          <WorkflowIcon icon={GitlabLogo} className="p-3 [--size:5.6rem]" />
-          <WorkflowIcon icon={ZLogo} className="p-4 [--size:7.2rem]" />
+        <div
+          className={clsx(
+            "flex items-center justify-center gap-4 [&_svg]:h-full [&_svg]:w-full [&_svg]:rounded-full [&_svg]:fill-white/80",
+            "duration-200 [&_.feature]:opacity-0 [&_.move-left]:transition-[transform,opacity]",
+            inView ? "[&_.feature]:animate-feature-slide" : "",
+          )}
+          ref={ref}
+        >
+          <WorkflowIcon
+            icon={FigmaLogo}
+            className="feature p-2 [--index:3] [--size:4rem] [--translate:2rem]"
+          />
+          <WorkflowIcon
+            icon={GitlabLogo}
+            className="feature p-3 [--index:2] [--size:5.6rem] [--translate:2rem]"
+          />
+          <WorkflowIcon
+            icon={ZLogo}
+            className="feature p-4 [--index:1] [--size:7.2rem] [--translate:2rem]"
+          />
           <div
             className={clsx(
               "relative z-10 mx-6 [mask-composite:exclude] after:absolute after:left-1/2 after:top-1/2 after:z-0 after:size-[12.8rem] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:border after:border-transparent-white after:bg-[linear-gradient(rgba(108,_56,_255,_0.3)_0%,_rgba(139,_98,_255,_0.3)_100%)]",
@@ -43,12 +59,21 @@ const FeatureWorkflows = () => {
           >
             <WorkflowMainIcon />
           </div>
-          <WorkflowIcon icon={FLogo} className="p-4 [--size:7.2rem]" />
-          <WorkflowIcon icon={GithubLogo} className="p-3 [--size:5.6rem]" />
-          <WorkflowIcon icon={RadioLogo} className="p-2 [--size:4rem]" />
+          <WorkflowIcon
+            icon={FLogo}
+            className="feature p-4 [--index:1] [--size:7.2rem] [--translate:-2rem]"
+          />
+          <WorkflowIcon
+            icon={GithubLogo}
+            className="feature p-3 [--index:2] [--size:5.6rem] [--translate:-2rem]"
+          />
+          <WorkflowIcon
+            icon={RadioLogo}
+            className="feature p-2 [--index:3] [--size:4rem] [--translate:-2rem]"
+          />
         </div>
       </div>
-      <div className="mt-[9.6rem] gap-14 flex max-w-[65rem] flex-col items-center text-center text-2xl font-normal md:text-4xl">
+      <div className="mt-[9.6rem] flex max-w-[65rem] flex-col items-center gap-14 text-center text-2xl font-normal md:text-4xl">
         <p>
           From customer support integrations to powerful Git automations, Linear
           streamlines the entire product development process.

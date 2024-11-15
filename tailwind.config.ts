@@ -150,6 +150,19 @@ const config: Config = {
           fill: "#fff",
         },
       },
+      "feature-slide": {
+        "0%": {
+          transform: "translateX(var(--translate))",
+          opacity: "0",
+        },
+        "60%": {
+          opacity: "1",
+        },
+        "100%": {
+          opacity: "1",
+          transform: "translateX(0)",
+        },
+      },
     },
     animation: {
       "fade-in": "fade-in 1s var(--animation-delay) ease forwards",
@@ -160,6 +173,8 @@ const config: Config = {
       "glow-lines-horizontal": "glow-lines-horizontal var(--duration) ease-in",
       "glow-lines-vertical": "glow-lines-vertical var(--duration) ease-in",
       zap: "zap 2.5s calc((var(--index) - 1) * 20ms) linear infinite",
+      "feature-slide":
+        "feature-slide 800ms calc(var(--index) * 100ms) ease-in-out forwards",
     },
   },
   plugins: [],
