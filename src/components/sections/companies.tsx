@@ -1,17 +1,15 @@
-import React from "react";
-import { RampLogo } from "./logos/ramp";
-import { LoomLogo } from "./logos/loom";
-import { VercelLogo } from "./logos/vercel";
-import { DescriptLogo } from "./logos/description";
-import { CashAppLogo } from "./logos/cashapp";
-import { RaycastLogo } from "./logos/raycast";
-import { MercuryLogo } from "./logos/mercury";
-import { RetoolLogo } from "./logos/retool";
-import { AlanLogo } from "./logos/alan";
-import { ArcLogo } from "./logos/arc";
-import { OpenSeaLogo } from "./logos/opensea";
-import { PitchLogo } from "./logos/pitch";
-import Stars from "./stars";
+import { AlanLogo } from "../logos/alan";
+import { ArcLogo } from "../logos/arc";
+import { CashAppLogo } from "../logos/cashapp";
+import { DescriptLogo } from "../logos/description";
+import { LoomLogo } from "../logos/loom";
+import { MercuryLogo } from "../logos/mercury";
+import { OpenSeaLogo } from "../logos/opensea";
+import { PitchLogo } from "../logos/pitch";
+import { RampLogo } from "../logos/ramp";
+import { RaycastLogo } from "../logos/raycast";
+import { RetoolLogo } from "../logos/retool";
+import { VercelLogo } from "../logos/vercel";
 
 const Companies = () => {
   return (

@@ -1,13 +1,13 @@
 import React from "react";
 
-const Stars = () => {
+const Stars = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="872"
       height="731"
       fill="none"
-      className=""
+      className={className}
     >
       <g fill="#fff" opacity="0.7">
         <circle
