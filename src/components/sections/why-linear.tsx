@@ -22,7 +22,7 @@ const WhyLinear = () => {
             <div className="mt-auto">
               <h3 className="mb-4 text-3xl">Built for your keyboard</h3>
               <p className="text-md text-secondary-text">
-                Fly through your tasks with rapid-fire keyboard shortcuts for
+                Fly through your tasks with rapid-fire keyboard shortcuts for 
                 everything. Literally everything.
               </p>
             </div>
