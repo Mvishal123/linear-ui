@@ -33,12 +33,19 @@ const FeatureWorkflows = () => {
 
         <div
           className={clsx(
-            "flex items-center justify-center gap-4 [&_svg]:h-full [&_svg]:w-full [&_svg]:rounded-full [&_svg]:fill-white/80",
+            "relative flex items-center justify-center gap-4 [&_svg]:h-full [&_svg]:w-full [&_svg]:rounded-full [&_svg]:fill-white/80",
             "duration-200 [&_.feature]:opacity-0 [&_.move-left]:transition-[transform,opacity]",
             inView ? "[&_.feature]:animate-feature-slide" : "",
           )}
           ref={ref}
         >
+          <>
+            {/* <div className="animate-feature-gradient-booster gradient-booster absolute h-[40rem] w-[40rem] rounded-full bg-[linear-gradient(90deg,_rgb(21,_11,_48)_0%,_rgb(91,_57,_184)_100%)]" /> */}
+            {/* <div className="animate-feature-gradient-booster absolute z-[-10] size-[40rem] rounded-full bg-[linear-gradient(90deg,_rgb(21,_11,_48)_0%,_rgb(91,_57,_184)_100%)] [--index:1]" /> */}
+            <div className="animate-feature-circles absolute z-[-1] size-[20rem] rounded-full border border-transparent-white bg-[linear-gradient(90deg,_transparent,_rgba(91,_57,_184,0.3)_100%)] opacity-0 [--delay:0s]" />
+            <div className="animate-feature-circles absolute z-[-1] size-[30rem] rounded-full border border-transparent-white bg-[linear-gradient(90deg,_transparent,_rgba(91,_57,_184,0.2)_100%)] opacity-0 [--delay:0.4s]" />
+            <div className="animate-feature-circles absolute z-[-1] size-[40rem] rounded-full border border-transparent-white bg-[linear-gradient(90deg,_transparent,_rgba(91,_57,_184,0.1)_100%)] opacity-0 [--delay:0.8s]" />
+          </>
           <WorkflowIcon
             icon={FigmaLogo}
             className="feature p-2 [--index:3] [--size:4rem] [--translate:2rem]"
@@ -53,7 +60,7 @@ const FeatureWorkflows = () => {
           />
           <div
             className={clsx(
-              "relative z-10 mx-6 [mask-composite:exclude] after:absolute after:left-1/2 after:top-1/2 after:z-0 after:size-[12.8rem] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:border after:border-transparent-white after:bg-[linear-gradient(rgba(108,_56,_255,_0.3)_0%,_rgba(139,_98,_255,_0.3)_100%)]",
+              "relative z-10 mx-6 after:absolute after:left-1/2 after:top-1/2 after:z-0 after:size-[12.8rem] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:border after:border-transparent-white after:bg-[linear-gradient(rgba(108,_56,_255,_0.3)_0%,_rgba(139,_98,_255,_0.3)_100%)]",
               "before:absolute before:inset-0 before:left-1/2 before:top-1/2 before:z-20 before:size-[7.2rem] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:border before:border-brand/80 before:bg-[linear-gradient(rgba(255,_255,_255,_0.3),_rgba(255,_255,_255,_0)_120%)] [&_svg]:size-[7.2rem]",
             )}
           >
@@ -98,7 +105,7 @@ const WorkflowIcon = ({ icon: Icon, className }: WorkflowIconProps) => {
   return (
     <div
       className={clsx(
-        "bg-[rgb(247, 248, 248)] flex size-[var(--size)] items-center justify-center rounded-full border border-transparent-white",
+        "bg-[rgba(247, 248, 248, 0.9)] flex size-[var(--size)] items-center justify-center rounded-full border border-transparent-white backdrop-blur-sm",
         className,
       )}
     >

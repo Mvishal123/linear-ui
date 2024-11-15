@@ -163,6 +163,33 @@ const config: Config = {
           transform: "translateX(0)",
         },
       },
+      "feature-gradient-booster": {
+        "0%": {
+          opacity: "0",
+          transform: "scale(0.9)",
+        },
+        "40%,50%": {
+          opacity: "1",
+          transform: "scale(1)",
+        },
+        "100%": {
+          opacity: "0",
+        },
+      },
+      "feature-circles": {
+        "0%": {
+          opacity: "0",
+          transform: "scale(0.9)",
+        },
+
+        "50%,60%": {
+          opacity: "1",
+          scale: "1",
+        },
+        "100%": {
+          opacity: "0",
+        },
+      },
     },
     animation: {
       "fade-in": "fade-in 1s var(--animation-delay) ease forwards",
@@ -175,6 +202,8 @@ const config: Config = {
       zap: "zap 2.5s calc((var(--index) - 1) * 20ms) linear infinite",
       "feature-slide":
         "feature-slide 800ms calc(var(--index) * 100ms) ease-in-out forwards",
+      "feature-circles":
+        "feature-circles 3400ms calc(500ms + var(--delay)) infinite backwards",
     },
   },
   plugins: [],
