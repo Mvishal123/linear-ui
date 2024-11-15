@@ -40,8 +40,6 @@ const FeatureWorkflows = () => {
           ref={ref}
         >
           <>
-            {/* <div className="animate-feature-gradient-booster gradient-booster absolute h-[40rem] w-[40rem] rounded-full bg-[linear-gradient(90deg,_rgb(21,_11,_48)_0%,_rgb(91,_57,_184)_100%)]" /> */}
-            {/* <div className="animate-feature-gradient-booster absolute z-[-10] size-[40rem] rounded-full bg-[linear-gradient(90deg,_rgb(21,_11,_48)_0%,_rgb(91,_57,_184)_100%)] [--index:1]" /> */}
             <div className="animate-feature-circles absolute z-[-1] size-[20rem] rounded-full border border-transparent-white bg-[linear-gradient(90deg,_transparent,_rgba(91,_57,_184,0.3)_100%)] opacity-0 [--delay:0s]" />
             <div className="animate-feature-circles absolute z-[-1] size-[30rem] rounded-full border border-transparent-white bg-[linear-gradient(90deg,_transparent,_rgba(91,_57,_184,0.2)_100%)] opacity-0 [--delay:0.4s]" />
             <div className="animate-feature-circles absolute z-[-1] size-[40rem] rounded-full border border-transparent-white bg-[linear-gradient(90deg,_transparent,_rgba(91,_57,_184,0.1)_100%)] opacity-0 [--delay:0.8s]" />

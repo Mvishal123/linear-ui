@@ -1,7 +1,5 @@
-import React from "react";
-import FeatureIssueTracking from "./feature-issue-tracking";
 import FeatureBuildMomentum from "./feature-build-momentum";
-import FeatureSetDirection from "./feature-set-direction";
+import FeatureIssueTracking from "./feature-issue-tracking";
 import FeatureWorkflows from "./feature-workflows";
 
 const FeaturesMain = () => {
@@ -9,7 +7,8 @@ const FeaturesMain = () => {
     <div>
       <FeatureIssueTracking />
       <FeatureBuildMomentum />
-      <FeatureSetDirection />
+      {/* Removed for lesser sections */}
+      {/* <FeatureSetDirection /> */}
       <FeatureWorkflows />
     </div>
   );

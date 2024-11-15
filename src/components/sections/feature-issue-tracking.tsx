@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { Features } from "../features";
@@ -15,11 +15,11 @@ const FeatureIssueTracking = () => {
   return (
     <Features featureColor="194, 97, 254" featureColorDark="53,42,79">
       <Features.Main
-      imageSize="small"
+        imageSize="small"
         heading={
           <>
             Issue Tracking <br />
-            You'll enjoy using
+            You&apos;ll enjoy using
           </>
         }
         subheading="Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team."

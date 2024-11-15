@@ -1,15 +1,13 @@
-import React from "react";
+import CommandMenu from "../command-menu";
 import BlazingFast from "../illustrations/blazing-fast";
 import LinearLogo from "../illustrations/linear-logo";
-import Keyboard from "../illustrations/keyboard";
 import KeyboardShortcuts from "../keyboard-shortcuts";
-import CommandMenu from "../command-menu";
 
 const WhyLinear = () => {
   return (
     <div className="text-center">
       <h2 className="mb-7 text-4xl md:text-7xl">
-        Unlike any tool <br /> you've used before
+        Unlike any tool <br /> you&apos;ve used before
       </h2>
       <p className="mx-auto mb-7 max-w-[68rem] text-lg text-secondary-text md:text-xl">
         Designed to the last pixel and engineered with unforgiving precision,
@@ -22,7 +20,7 @@ const WhyLinear = () => {
             <div className="mt-auto">
               <h3 className="mb-4 text-3xl">Built for your keyboard</h3>
               <p className="text-md text-secondary-text">
-                Fly through your tasks with rapid-fire keyboard shortcuts for 
+                Fly through your tasks with rapid-fire keyboard shortcuts for
                 everything. Literally everything.
               </p>
             </div>

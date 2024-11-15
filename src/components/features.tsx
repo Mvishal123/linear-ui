@@ -25,7 +25,9 @@ export const Features = ({
         "relative mt-[12.8rem] md:mt-[25.2rem]",
         "after:bg-[radial-gradient(ellipse_100%_40%_at_50%_60%,rgba(var(--feature-color),0.5),transparent) relative flex flex-col items-center overflow-x-clip after:pointer-events-none after:absolute after:inset-0",
         "before:pointer-events-none before:absolute before:h-[40rem] before:w-full before:-translate-y-[65%] before:rotate-180 before:bg-[conic-gradient(from_90deg_at_80%_50%,#000212,rgb(var(--feature-color-dark))),conic-gradient(from_270deg_at_20%_50%,rgb(var(--feature-color-dark)),#000212)] before:bg-no-repeat before:transition-[transform,opacity] before:duration-1000 before:ease-in before:[background-position:1%_0%,99%_0%] before:[background-size:50%_100%,50%_100%] before:[mask:radial-gradient(100%_50%_at_center_center,_black,_transparent)]",
-        inView ? "in-view before:scale-[200%] before:opacity-100" : "before:opacity-40 scale-60",
+        inView
+          ? "in-view before:scale-[200%] before:opacity-100"
+          : "scale-60 before:opacity-40",
       )}
       style={
         {
@@ -126,6 +128,7 @@ const FeatureCards = ({ features }: FeatureCardsProps) => {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {features.map(({ image, imageClassName, title, text }) => (
           <div
+            key={title}
             className={clsx(
               "relative aspect-[1.1/1] w-full overflow-hidden rounded-2xl border-[1px] border-transparent-white px-8 py-6 md:rounded-[4.8rem] md:p-14",
               "bg-[radial-gradient(ellipse_at_center,rgba(var(--feature-color),0.15),transparent)]",
