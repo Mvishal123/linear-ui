@@ -8,7 +8,7 @@ const getRandomNumber = (min: number, max: number): number => {
   return Math.floor(Math.random() * (max - min) + min);
 };
 
-const availableLenghts = [8, 10, 12, 14];
+const availableLengths = [8, 10, 12, 14];
 
 interface Line {
   id: string;
@@ -38,13 +38,13 @@ const HeroImage = () => {
               direction: Math.random() > 0.5 ? "to left" : "to top",
               duration: "2s",
               length:
-                availableLenghts[getRandomNumber(0, availableLenghts.length)],
+                availableLengths[getRandomNumber(0, availableLengths.length)],
             },
           ]);
         }, interval);
       };
 
-      sendLines(getRandomNumber(1000, 4500));
+      sendLines(getRandomNumber(1000, 2000));
 
       return () => {
         if (intervalRef.current) clearInterval(intervalRef.current);
