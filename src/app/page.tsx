@@ -28,7 +28,7 @@ const page = () => {
       <FeaturesMain />
       <div
         className={clsx(
-          "after:stars-mask stars-mask relative z-[-1] -mb-[20rem] -mt-[8rem] h-[60rem] overflow-hidden [--color:#7876C5] after:absolute after:inset-0 after:z-[-1] after:bg-radial-faded after:opacity-65 after:blur-[20rem]",
+          "after:stars-mask stars-mask relative z-[-1] -mb-[20rem]  h-[60rem] overflow-hidden [--color:#7876C5] after:absolute after:inset-0 after:z-[-1] after:bg-radial-faded after:opacity-65 after:blur-[20rem]",
           "before:absolute before:-left-1/2 before:bottom-1/2 before:h-[150%] md:before:h-[500%] before:w-[200%] before:rounded-[50%] before:border before:border-[rgba(120,_119,_198,_0.4)] before:bg-background",
         )}
       >

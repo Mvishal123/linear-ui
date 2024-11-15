@@ -23,9 +23,9 @@ export const Features = ({
       ref={ref}
       className={clsx(
         "relative mt-[12.8rem] md:mt-[25.2rem]",
-        "after:bg-[radial-gradient(ellipse_100%_40%_at_50%_60%,rgba(var(--feature-color),0.1),transparent) relative flex flex-col items-center overflow-x-clip after:pointer-events-none after:absolute after:inset-0",
-        "before:pointer-events-none before:absolute before:h-[40rem] before:w-full before:-translate-y-[65%] before:rotate-180 before:bg-[conic-gradient(from_90deg_at_80%_50%,#000212,rgb(var(--feature-color-dark))),conic-gradient(from_270deg_at_20%_50%,rgb(var(--feature-color-dark)),#000212)] before:bg-no-repeat before:opacity-40 before:transition-[transform,opacity] before:duration-1000 before:ease-in before:[background-position:1%_0%,99%_0%] before:[background-size:50%_100%,50%_100%] before:[mask:radial-gradient(100%_50%_at_center_center,_black,_transparent)]",
-        inView ? "in-view before:scale-[200%] before:opacity-100" : "scale-60",
+        "after:bg-[radial-gradient(ellipse_100%_40%_at_50%_60%,rgba(var(--feature-color),0.5),transparent) relative flex flex-col items-center overflow-x-clip after:pointer-events-none after:absolute after:inset-0",
+        "before:pointer-events-none before:absolute before:h-[40rem] before:w-full before:-translate-y-[65%] before:rotate-180 before:bg-[conic-gradient(from_90deg_at_80%_50%,#000212,rgb(var(--feature-color-dark))),conic-gradient(from_270deg_at_20%_50%,rgb(var(--feature-color-dark)),#000212)] before:bg-no-repeat before:transition-[transform,opacity] before:duration-1000 before:ease-in before:[background-position:1%_0%,99%_0%] before:[background-size:50%_100%,50%_100%] before:[mask:radial-gradient(100%_50%_at_center_center,_black,_transparent)]",
+        inView ? "in-view before:scale-[200%] before:opacity-100" : "before:opacity-40 scale-60",
       )}
       style={
         {
@@ -84,7 +84,7 @@ const FeatureMain = ({
         <p className="my-16 mx-auto text-2xl leading-tight text-white md:w-[80%] md:text-4xl">
           {subheading}
         </p>
-      <hr className="mb-[7.2rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
+        <hr className="mb-[7.2rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]" />
       </Container>
     </>
   );

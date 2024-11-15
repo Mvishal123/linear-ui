@@ -13,7 +13,7 @@ import {
 
 const FeatureIssueTracking = () => {
   return (
-    <Features featureColor="194,97,254" featureColorDark="53,42,79">
+    <Features featureColor="194, 97, 254" featureColorDark="53,42,79">
       <Features.Main
       imageSize="small"
         heading={

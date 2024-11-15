@@ -48,7 +48,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-transparent-white mt-12 border-t">
+    <footer className="border-transparent-white mt-nav-height border-t">
       <Container>
         <div className="flex flex-col justify-between py-[5.6rem] text-sm lg:flex-row">
           <div className="flex w-full flex-row justify-between lg:mr-auto lg:w-auto lg:flex-col">
