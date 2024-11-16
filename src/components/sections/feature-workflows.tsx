@@ -46,19 +46,19 @@ const FeatureWorkflows = () => {
           </>
           <WorkflowIcon
             icon={FigmaLogo}
-            className="feature p-2 [--index:3] [--size:4rem] [--translate:2rem]"
+            className="shrink-0 feature p-2 [--index:3] [--size:4rem] [--translate:2rem]"
           />
           <WorkflowIcon
             icon={GitlabLogo}
-            className="feature p-3 [--index:2] [--size:5.6rem] [--translate:2rem]"
+            className="shrink-0 feature p-3 [--index:2] [--size:5.6rem] [--translate:2rem]"
           />
           <WorkflowIcon
             icon={ZLogo}
-            className="feature p-4 [--index:1] [--size:7.2rem] [--translate:2rem]"
+            className="shrink-0 feature p-4 [--index:1] [--size:7.2rem] [--translate:2rem]"
           />
           <div
             className={clsx(
-              "relative z-10 mx-6 after:absolute after:left-1/2 after:top-1/2 after:z-0 after:size-[12.8rem] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:border after:border-transparent-white after:bg-[linear-gradient(rgba(108,_56,_255,_0.3)_0%,_rgba(139,_98,_255,_0.3)_100%)]",
+              "shrink-0 relative z-10 mx-6 after:absolute after:left-1/2 after:top-1/2 after:z-0 after:size-[12.8rem] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:border after:border-transparent-white after:bg-[linear-gradient(rgba(108,_56,_255,_0.3)_0%,_rgba(139,_98,_255,_0.3)_100%)]",
               "before:absolute before:inset-0 before:left-1/2 before:top-1/2 before:z-20 before:size-[7.2rem] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:border before:border-brand/80 before:bg-[linear-gradient(rgba(255,_255,_255,_0.3),_rgba(255,_255,_255,_0)_120%)] [&_svg]:size-[7.2rem]",
             )}
           >
@@ -66,15 +66,15 @@ const FeatureWorkflows = () => {
           </div>
           <WorkflowIcon
             icon={FLogo}
-            className="feature p-4 [--index:1] [--size:7.2rem] [--translate:-2rem]"
+            className="shrink-0 feature p-4 [--index:1] [--size:7.2rem] [--translate:-2rem]"
           />
           <WorkflowIcon
             icon={GithubLogo}
-            className="feature p-3 [--index:2] [--size:5.6rem] [--translate:-2rem]"
+            className="shrink-0 feature p-3 [--index:2] [--size:5.6rem] [--translate:-2rem]"
           />
           <WorkflowIcon
             icon={RadioLogo}
-            className="feature p-2 [--index:3] [--size:4rem] [--translate:-2rem]"
+            className="shrink-0 feature p-2 [--index:3] [--size:4rem] [--translate:-2rem]"
           />
         </div>
       </div>
